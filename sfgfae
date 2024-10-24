@@ -1,0 +1,121 @@
+Funzione dello switch:
+Si occupa di collegare i dispositivi all'interno di una rete.
+Ha porte (in numero variabile) che trasmettono dati a velocità che vanno da 100 Mbps fino a 10 Gbps.
+
+~
+
+Caratteristica principale: Switching Bandwidth
+Rappresenta la velocità complessiva dello switch in Gigabit per secondo (Gbps).
+Solo gli switch di alto livello riescono a sommare la velocità di tutte le porte contemporaneamente. Se uno switch ha una switching bandwidth inferiore, non può supportare tutte le porte al massimo simultaneamente.
+
+~
+
+Configurazione di uno switch:
+Fisso: Numero e tipo di porte non possono essere cambiati.
+Modulare: Puoi aggiungere o cambiare moduli (chassis) per variare il numero o il tipo di porte.
+
+~
+
+Componenti interni di uno switch
+Uno switch ha una scheda madre con vari componenti:
+Processore: Elabora i dati e coordina lo switch.
+Logica di switching: Gestisce il traffico tra le porte.
+Buffer: Memorizza temporaneamente i dati.
+Memoria FLASH: Per salvare il sistema operativo (come Cisco IOS).
+Memoria RAM: Per i file temporanei e il sistema operativo corrente.
+Memoria NVRAM: Per salvare la configurazione dello switch.
+Memoria ROM: Mantiene un’immagine minima del software in caso di guasti.
+Alimentazione: Fornisce energia allo switch.
+
+~
+
+Come interagire con lo switch
+Gli switch non hanno tastiera o schermo, quindi ci si collega in due modi:
+Console (connessione locale): Tramite cavo seriale a un computer per fare la configurazione iniziale.
+SSH o Telnet (connessione remota): Per accedere da remoto tramite IP configurato.
+
+~
+
+Funzione del router:
+Decide il percorso migliore per inviare i pacchetti dati, basandosi sull'indirizzo IP di destinazione.
+Dirige i pacchetti verso l'interfaccia di uscita corretta, consentendo la comunicazione tra diverse reti.
+
+
+~
+
+Componenti interni di un router
+Il router è come un computer ed è composto da una scheda madre con vari componenti:
+Alimentatore: Fornisce energia al router.
+CPU: Esegue il sistema operativo del router (come IOS).
+Moduli DDR RAM: Memoria temporanea per il sistema operativo.
+NVRAM: Memoria non volatile per salvare le configurazioni.
+Slot WAN Interface Cards (WIC): Per connettere diverse reti WAN.
+Modulo ROM: Contiene un sistema operativo ridotto per l’avvio.
+Coprocessore crittografico: Per la gestione sicura dei dati.
+RTC (Real Time Clock): Mantiene il tempo nel router.
+Ha diverse memorie (RAM, ROM, NVRAM e FLASH) per eseguire e salvare il suo sistema operativo e le configurazioni.
+
+
+~
+
+CISCO IOS:
+Cisco IOS: Sistema operativo per dispositivi di rete Cisco.
+Interfaccia CLI: Accesso tramite console, telnet o SSH per configurare i dispositivi.
+Modalità di Configurazione:
+User EXEC mode: Accesso base, comandi limitati.
+Privileged EXEC mode: Accesso avanzato, comandi di configurazione.
+Global Configuration mode: Configurazione generale del dispositivo.
+Interface Configuration mode: Configurazione specifica delle interfacce.
+
+~
+
+IPv4: Come Funziona?
+Per capire quanti indirizzi sono necessari, bisogna calcolare quanti host (dispositivi) ci sono in ogni rete e usare questa formula:
+H=2^b-3
+Dove:
+b = numero di bit per gli host (presi dal prefisso dell'indirizzo IP)
+3 = riservato per l'indirizzo IP della rete, broadcast e gateway.
+Quindi, per una rete con 8 bit disponibili, ci sarebbero 2^8−3=253 host disponibili.
+
+~
+
+Nota sulle Classi di IP
+Viene spesso utilizzato un sistema a byte boundary, cioè organizzare gli IP in blocchi facili da riconoscere, come /8, /16 o /24.
+In pratica:
+Usare /24 quando servono fino a 253 host.
+Usare /16 quando servono più indirizzi, fino a migliaia di host.
+
+~
+
+2. Routing statico in una rete WAN
+Quando un router riceve un pacchetto in una rete WAN, segue queste operazioni:
+Decapsula il pacchetto IP, cioè rimuove le informazioni del livello 2.
+Aggiorna il campo TTL (tempo di vita) del pacchetto IPv4. Se il valore arriva a 0, il pacchetto viene scartato.
+Estrae l’indirizzo IP di destinazione dal pacchetto.
+Cerca nella tabella di routing per trovare un’interfaccia di uscita corrispondente a quell’indirizzo IP.
+Se trova una corrispondenza, inoltra il pacchetto verso l'interfaccia di uscita.
+Se non c’è corrispondenza, il pacchetto viene scartato.
+
+
+~
+
+Cos'è il routing statico?
+È un metodo in cui il percorso per raggiungere una destinazione è configurato manualmente nella tabella di routing del router.
+Vantaggi:
+Sai esattamente il percorso che i pacchetti seguono.
+Favorisce la risoluzione dei problemi perché ogni passaggio è noto.
+Minimizza l’uso della banda, poiché evita di inviare informazioni inutili ad altri router.
+
+
+~
+
+3. Subnetting
+Subnetting significa dividere una rete IP in sottoreti più piccole (subnet). Questo processo ha diversi benefici:
+Riduce il traffico: Ogni sottorete ha meno host, quindi il traffico di broadcast è ridotto.
+Aumenta la velocità: Meno traffico significa migliori prestazioni per i dispositivi.
+Semplifica la gestione: Dividere la rete aiuta a isolare problemi in singole sottoreti.
+Aumenta la sicurezza: Puoi applicare regole diverse di accesso per ogni sottorete.
+Come fare subnetting:
+Per creare delle sottoreti, si modifica il prefisso dell’indirizzo IP (ad esempio da /24 a /25), riducendo il numero di host per sottorete.
+
+~
