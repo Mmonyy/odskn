@@ -1,6 +1,7 @@
 Il bytecode è un linguaggio intermedio, una rappresentazione del codice sorgente tradotto da un compilatore. Ad esempio, in Java, il codice sorgente (.java) viene compilato in bytecode (.class).
 ~
 
+Il bytecode è un linguaggio intermedio, una rappresentazione del codice sorgente tradotto da un compilatore. Ad esempio, in Java, il codice sorgente (.java) viene compilato in bytecode (.class).
 Questo bytecode non è eseguibile direttamente dalla CPU del computer ma viene interpretato o eseguito da una macchina virtuale, come la Java Virtual Machine (JVM).
 
 ~
