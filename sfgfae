@@ -1,31 +1,95 @@
-Il bytecode è un linguaggio intermedio, una rappresentazione del codice sorgente tradotto da un compilatore. Ad esempio, in Java, il codice sorgente (.java) viene compilato in bytecode (.class).
-~
-
-Il bytecode è un linguaggio intermedio, una rappresentazione del codice sorgente tradotto da un compilatore. Ad esempio, in Java, il codice sorgente (.java) viene compilato in bytecode (.class).
-Questo bytecode non è eseguibile direttamente dalla CPU del computer ma viene interpretato o eseguito da una macchina virtuale, come la Java Virtual Machine (JVM).
-
-~
-
-È una forma portabile, indipendente dalla piattaforma, che consente l'esecuzione su diversi sistemi operativi e architetture hardware.
+ Le Fasi del Ciclo di Vita del Software
+Il ciclo di vita del software descrive tutte le fasi necessarie per progettare, realizzare e mantenere un prodotto software.
+*Analisi: Si raccolgono i requisiti, cioè cosa il software deve fare (funzionalità e caratteristiche richieste).
+*Progettazione: Si definisce l'architettura del sistema (come sarà organizzato e funzionerà).
+*Implementazione: Si scrive il codice (la parte "tecnica" dello sviluppo).
+*Test: Si verifica che il software funzioni senza errori.
+*Manutenzione: Si aggiorna il software per correggere problemi o aggiungere nuove funzionalità.
 
 ~
 
-Il garbage collector è un sistema automatico che gestisce la memoria in un programma. Serve a recuperare la memoria occupata da oggetti che non sono più utilizzati, evitando memory leaks.
-Ad esempio, in linguaggi come Java o Python, il garbage collector monitora gli oggetti e li elimina quando non ci sono più riferimenti ad essi.
-Questo processo aiuta a ottimizzare l'utilizzo della memoria e riduce il rischio di errori legati alla gestione manuale della memoria.
+Modello a Cascata
+È un approccio sequenziale: ogni fase (analisi → progettazione → implementazione → test → manutenzione) si svolge in ordine, senza tornare indietro.
+Pro: Semplice da seguire.
+Contro: Poco flessibile se emergono nuovi requisiti durante il processo.
 
 ~
 
-Una classe è un modello o una struttura che definisce le proprietà (attributi) e i comportamenti (metodi) di un oggetto.
+Sviluppo Incrementale
+Il software viene sviluppato e migliorato a versioni successive, ciascuna delle quali aggiunge nuove funzionalità.
+Pro: Più adattabile e consente di avere versioni funzionanti già nelle prime fasi.
 
 ~
 
-Un metodo statico è un metodo associato alla classe, non alle sue istanze (oggetti). Può essere invocato senza creare un oggetto della classe.
-
+Metodologie Agili
+Approccio basato su iterazioni rapide, continuo miglioramento e coinvolgimento dell'utente.
+Scrum: Una metodologia Agile molto diffusa, dove il lavoro è diviso in "sprint" (piccoli cicli di sviluppo) e si usano strumenti come il product backlog (lista delle cose da fare).
+I ruoli principali sono:
+*Scrum Master: Facilita il team e il processo.
+*Product Owner: Rappresenta le esigenze dell’utente.
 
 ~
 
-Quando crei due oggetti diversi della stessa classe, condividono la struttura definita nella classe (stessi attributi e metodi), ma hanno stati indipendenti.
+ Ingegneria del Software
+L'ingegneria del software è la disciplina che guida lo sviluppo del software in modo sistematico e organizzato, rispettando tempi e costi. L'obiettivo è creare prodotti affidabili e di alta qualità.
 
+~
+
+Requisiti del Software
+Un requisito software rappresenta ciò che il sistema deve offrire o come deve comportarsi.
+Tipi di Requisiti:
+*Funzionali: Cosa il software deve fare (es. "gestire pagamenti").
+*Non Funzionali: Come deve comportarsi (es. "essere veloce", "sicuro").
+*Tecnologici: Aspetti tecnici come hardware o sistemi operativi richiesti.
+Priorità dei Requisiti:
+*MUST: Indispensabili.
+*SHOULD: Desiderabili ma non essenziali.
+*MAY: Opzionali.
+
+~
+
+Casi d'Uso
+I casi d'uso descrivono scenari di interazione tra il sistema e gli attori (es. utenti o altri sistemi). Sono rappresentati in diagrammi UML con simboli grafici (come l’omino stilizzato per gli attori).
+Relazioni tra Casi d'Uso:
+*Inclusione: Un caso è sempre parte di un altro.
+Es. "Autenticazione" è inclusa in "Prenotazione biglietto".
+*Estensione: Un caso è opzionale rispetto a un altro.
+Es. "Invio e-mail di conferma" può essere un’estensione di "Acquisto".
+*Generalizzazione: Un caso è una variante specifica di un altro.
+Es. "Pagamento con carta" è una generalizzazione di "Pagamento".
+Relazione tra Attori:
+Anche gli attori possono avere relazioni di generalizzazione.
+Es. "Utente Premium" eredita tutte le azioni disponibili per "Utente Base", ma con funzioni aggiuntive.
+
+~
+
+UML (Unified Modeling Language)
+L'UML è un linguaggio visivo usato per progettare e documentare software. Usa diagrammi per rappresentare vari aspetti di un sistema.
+Diagrammi principali:
+*Diagrammi di classi (struttura del sistema).
+*Diagrammi di oggetti (esempi pratici di come le classi funzionano).
+*Diagrammi di sequenza (flusso delle operazioni).
+*Diagrammi di attività (azioni eseguite in un processo).
+
+~
+
+Qualità del Software
+Le caratteristiche di qualità di un software includono:
+*Compatibilità: Funziona su diversi sistemi.
+*Funzionalità: Soddisfa i requisiti.
+*Affidabilità: Funziona senza problemi.
+*Efficienza: Usa bene le risorse (es. memoria, CPU).
+*Portabilità: Facilità di trasferimento su altri ambienti.
+*Sicurezza: Protegge i dati.
+
+~
+
+Pattern di Progettazione
+I pattern sono soluzioni generali a problemi comuni nello sviluppo software.
+Ogni pattern include:
+*Nome
+*Problema che risolve
+*Soluzione proposta
+*Contesto in cui si applica.
 
 ~
