@@ -93,3 +93,10 @@ Ogni pattern include:
 *Contesto in cui si applica.
 
 ~
+
+#include <stdio.h>  // Include per input/output
+#include <stdlib.h> // Include per l'allocazione dinamica della memoria
+
+int main(int argc, char *argv[]) {
+
+}
