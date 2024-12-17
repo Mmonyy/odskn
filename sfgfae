@@ -1,102 +1,102 @@
- Le Fasi del Ciclo di Vita del Software
-Il ciclo di vita del software descrive tutte le fasi necessarie per progettare, realizzare e mantenere un prodotto software.
-*Analisi: Si raccolgono i requisiti, cioè cosa il software deve fare (funzionalità e caratteristiche richieste).
-*Progettazione: Si definisce l'architettura del sistema (come sarà organizzato e funzionerà).
-*Implementazione: Si scrive il codice (la parte "tecnica" dello sviluppo).
-*Test: Si verifica che il software funzioni senza errori.
-*Manutenzione: Si aggiorna il software per correggere problemi o aggiungere nuove funzionalità.
+The arrival of the europeans
+
+christopher Columbos from Spain, 1492
+North and South America + nearby islands:
+known as the New World
+Columbus discovery: era of European exploration and colonization
+devastating effect on Native Americans
+England, France, and the Netherlands
+
 
 ~
 
-Modello a Cascata
-È un approccio sequenziale: ogni fase (analisi → progettazione → implementazione → test → manutenzione) si svolge in ordine, senza tornare indietro.
-Pro: Semplice da seguire.
-Contro: Poco flessibile se emergono nuovi requisiti durante il processo.
+The establishment of the 13 colonies
+First permanent English settlement:
+jamestown (VA) in 1607
+Second English colony: Plymouth (MA) by the Pilgrims Fathers in 1620
+a group of persecuted Protestants escaping from England
+by 1770: 13 colonies
+
 
 ~
 
-Sviluppo Incrementale
-Il software viene sviluppato e migliorato a versioni successive, ciascuna delle quali aggiunge nuove funzionalità.
-Pro: Più adattabile e consente di avere versioni funzionanti già nelle prime fasi.
+American Revolutionary War 1775-1783
+not idyllic relations
+Protests against high taxation without political representation
+Declaration of independence from Britain - July 4, 1776
+Bill of Rights in 1791 adopted as constitutional amendments
+in-depth study p.68
+
 
 ~
 
-Metodologie Agili
-Approccio basato su iterazioni rapide, continuo miglioramento e coinvolgimento dell'utente.
-Scrum: Una metodologia Agile molto diffusa, dove il lavoro è diviso in "sprint" (piccoli cicli di sviluppo) e si usano strumenti come il product backlog (lista delle cose da fare).
-I ruoli principali sono:
-*Scrum Master: Facilita il team e il processo.
-*Product Owner: Rappresenta le esigenze dell’utente.
+The Founding documents of the USA
+Declaration of independence July 3, 1776
+Constitution 1788
+Bill of Rights 1791
+
 
 ~
 
- Ingegneria del Software
-L'ingegneria del software è la disciplina che guida lo sviluppo del software in modo sistematico e organizzato, rispettando tempi e costi. L'obiettivo è creare prodotti affidabili e di alta qualità.
+ These three documents:
+“the Charters of Freedom”
+secured the rights of the American people
+instrumental to the founding and philosophy of the United States
 
 ~
 
-Requisiti del Software
-Un requisito software rappresenta ciò che il sistema deve offrire o come deve comportarsi.
-Tipi di Requisiti:
-*Funzionali: Cosa il software deve fare (es. "gestire pagamenti").
-*Non Funzionali: Come deve comportarsi (es. "essere veloce", "sicuro").
-*Tecnologici: Aspetti tecnici come hardware o sistemi operativi richiesti.
-Priorità dei Requisiti:
-*MUST: Indispensabili.
-*SHOULD: Desiderabili ma non essenziali.
-*MAY: Opzionali.
+The Declaration of Independence July 4, 1776
+John Adams, Benjamin Franklin, Thomas Jefferson, Robert R. Livingston, and Roger Sherman
+Thomas Jefferson: Organization of the document into different parts → Preamble, Declaration of Natural Rights, List of Grievances and Resolution of Independence
+
 
 ~
 
-Casi d'Uso
-I casi d'uso descrivono scenari di interazione tra il sistema e gli attori (es. utenti o altri sistemi). Sono rappresentati in diagrammi UML con simboli grafici (come l’omino stilizzato per gli attori).
-Relazioni tra Casi d'Uso:
-*Inclusione: Un caso è sempre parte di un altro.
-Es. "Autenticazione" è inclusa in "Prenotazione biglietto".
-*Estensione: Un caso è opzionale rispetto a un altro.
-Es. "Invio e-mail di conferma" può essere un’estensione di "Acquisto".
-*Generalizzazione: Un caso è una variante specifica di un altro.
-Es. "Pagamento con carta" è una generalizzazione di "Pagamento".
-Relazione tra Attori:
-Anche gli attori possono avere relazioni di generalizzazione.
-Es. "Utente Premium" eredita tutte le azioni disponibili per "Utente Base", ma con funzioni aggiuntive.
+The Preamble
+Introduction to the document
+informing Great Britain of the separation
+
+The Natural Rights
+Explanation of rights that should never be taken away
+
+The List of Grievances
+List of all the complaints against George III
+
 
 ~
 
-UML (Unified Modeling Language)
-L'UML è un linguaggio visivo usato per progettare e documentare software. Usa diagrammi per rappresentare vari aspetti di un sistema.
-Diagrammi principali:
-*Diagrammi di classi (struttura del sistema).
-*Diagrammi di oggetti (esempi pratici di come le classi funzionano).
-*Diagrammi di sequenza (flusso delle operazioni).
-*Diagrammi di attività (azioni eseguite in un processo).
+The Resolution of Independence
+Declaration of freedom and independence from Great Britain
+
+Adoption of the declaration of independence → 4 july, 1776 → Birth of a new nation
+
+Principles on which the american government and identity are based
+Not legally binding, but powerful
+inspiration for people around the world in the fight for freedom and equality
+“a rebuke and a stumbling-block to tyranny and oppression” (Abraham Lincoln, 1859)
+
 
 ~
 
-Qualità del Software
-Le caratteristiche di qualità di un software includono:
-*Compatibilità: Funziona su diversi sistemi.
-*Funzionalità: Soddisfa i requisiti.
-*Affidabilità: Funziona senza problemi.
-*Efficienza: Usa bene le risorse (es. memoria, CPU).
-*Portabilità: Facilità di trasferimento su altri ambienti.
-*Sicurezza: Protegge i dati.
+The Constitution
+
+Preamble and seven articles + twenty-seven amendments
+The Preamble
+Five goals of the constitution (Establish justice, insure domestic tranquility, provide for the common defence, promote the general welfare, and secure the blessings of liberty)
+
+Article 1: legislative branch → congress, its division and members, their terms of office
+Article 2: executive branch → terms of office and powers of the president
+Article 3: judicial branch → supreme court
+Article 4: relationship between the federal government and the states and relations among the states
+Article 5: process for amending the constitution
+Article 6: Supremacy clause → constitution and federal law take precedence over state law
+Article 7: ratification process
+
+Amendment 1: Freedom of speech, Religion and the process
+Amendment 2: the right to bear Arms
+Amendment 3: the housing of soldiers
+Amendment 4: protection from unreasonable searches and seizure
+Amendment 5: protection of rights to life, liberty and property
+
 
 ~
-
-Pattern di Progettazione
-I pattern sono soluzioni generali a problemi comuni nello sviluppo software.
-Ogni pattern include:
-*Nome
-*Problema che risolve
-*Soluzione proposta
-*Contesto in cui si applica.
-
-~
-
-#include <stdio.h>  // Include per input/output
-#include <stdlib.h> // Include per l'allocazione dinamica della memoria
-
-int main(int argc, char *argv[]) {
-
-}
