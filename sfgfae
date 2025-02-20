@@ -1,87 +1,46 @@
-public void salvaCatalogo(String filename) throws IOException {
-    try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(filename))) {
-        out.writeObject(catalogo);
-        System.out.println("Catalogo salvato su " + filename);
+#include <iostream>
+#include <vector>
+
+push_back(val): Aggiunge un elemento alla fine.
+pop_back(): Rimuove l'ultimo elemento.
+insert(pos, val): Inserisce un elemento in una data posizione.
+erase(pos): Rimuove un elemento in una data posizione.
+clear(): Cancella tutti gli elementi.
+resize(n): Cambia la dimensione del vettore.
+assign(n, val): Sostituisce tutti gli elementi con n copie di val.
+at(i): Ritorna l'elemento in posizione i (con controllo limiti).
+size(): Ritorna il numero di elementi.
+capacity(): Ritorna la capacità del vettore.
+empty(): Restituisce true se il vettore è vuoto.
+max_size(): Ritorna la dimensione massima possibile.
+
+~
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+class Figura {
+private:
+    string colore;
+
+public:
+    void impostaColore(const string &c) {
+        colore = c;
     }
-}
-
-~
-
-public void caricaCatalogo(String filename) throws IOException, ClassNotFoundException {
-    try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(filename))) {
-        catalogo = (List<Libro>) in.readObject();
-        System.out.println("Catalogo caricato da " + filename);
+    string getColore() const {
+        return colore;
     }
-}
+};
 
-~
+class Cerchio : public Figura {
+private:
+    double raggio;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+public:
+    Cerchio(double r) : raggio(r) {}
 
- public void salvaSuFile() {
-        try {
-            FileWriter writer = new FileWriter("porto.txt");
-            for (int i = 0; i < MAX_POSTI; i++) {
-                if (porto[i] != null) {
-                    writer.write(porto[i].toString() + "\n"); 
-                }
-            }
-        } catch (IOException e) {
-            System.err.println("Errore durante il salvataggio del file: " + e.getMessage());
-        }
+    double calcolaArea() const {
+        return M_PI * raggio * raggio;
     }
-
-
-~
-
-import java.util.Scanner;
-import java.util.InputMismatchException;
-
- Scanner obj = new Scanner(System.in);
- int scelta;
-
-do{
-	 scelta = obj.nextInt();
-            switch(scelta){
-                case 1 :
-			try{
-			String nome = obj.nextLine();
-			 }
-                catch(InputMismatchException e){
-                    System.err.println("Errore input.");
-                }
-}while(scelta!=0);
-
-~
-
-int[] numeri = new int[5]; // Crea un array di 5 interi (tutti inizializzati a 0)
-int[] numeri = {10, 20, 30, 40, 50}; // Crea e inizializza direttamente
-
- Libro[] libreria = new Libro[3];
-        
-// Assegniamo gli oggetti all'array
-libreria[0] = new Libro("1984", "George Orwell");
-
-~
-
-import java.util.ArrayList;
-public class Main {
-    public static void main(String[] args) {
-    ArrayList<String> nomi = new ArrayList<>();
-    nomi.add("Alice");
-    System.out.println(nomi.get(1));  // Output: Bob
-    }
-}
-
-~
-
-add() → Aggiunge elementi
-get() → Ottiene un elemento
-set() → Modifica un elemento
-remove() → Rimuove un elemento
-size() → Ottiene la dimensione
-contains() → Controlla se un elemento è presente
-clear() → Cancella tutto
-sort() → Ordina gli elementi
+};
