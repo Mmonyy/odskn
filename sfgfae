@@ -44,3 +44,112 @@ public:
         return M_PI * raggio * raggio;
     }
 };
+
+~
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
+// Classe base per i cassonetti
+abstract class Cassonetto {
+    protected String codiceUnivoco;
+    protected double latitudine;
+    protected double longitudine;
+    protected LocalDate dataInstallazione;
+    protected LocalDateTime dataUltimoSvuotamento;
+    protected double capacitaMassima;
+    protected double quantitaAttuale;
+
+    public Cassonetto(String codiceUnivoco, double latitudine, double longitudine, double capacitaMassima) {
+        this.codiceUnivoco = codiceUnivoco;
+        this.latitudine = latitudine;
+        this.longitudine = longitudine;
+        this.dataInstallazione = LocalDate.now();
+        this.dataUltimoSvuotamento = LocalDateTime.now();
+        this.capacitaMassima = capacitaMassima;
+        this.quantitaAttuale = 0;
+    }
+
+    public void registrareSvuotamento() {
+        this.quantitaAttuale = 0;
+        this.dataUltimoSvuotamento = LocalDateTime.now();
+    }
+
+    public double calcolaPercentualeRiempimento() {
+        return (quantitaAttuale / capacitaMassima) * 100;
+    }
+
+    public void aggiungiRifiuto(double quantita) {
+        if (quantitaAttuale + quantita <= capacitaMassima) {
+            quantitaAttuale += quantita;
+        } else {
+            System.out.println("Cassonetto pieno! Non è possibile aggiungere altro rifiuto.");
+        }
+    }
+
+    public String toString() {
+        return "Cassonetto " + codiceUnivoco + " - Riempimento: " + calcolaPercentualeRiempimento() + "%";
+    }
+}
+
+// Sottoclasse per il cassonetto dell'organico (peso in kg)
+class CassonettoOrganico extends Cassonetto {
+    public CassonettoOrganico(String codice, double lat, double lon, double capacitaMax) {
+        super(codice, lat, lon, capacitaMax);
+    }
+}
+
+// Sottoclasse per il cassonetto del vetro (numero di bottiglie)
+class CassonettoVetro extends Cassonetto {
+    public CassonettoVetro(String codice, double lat, double lon, double capacitaMax) {
+        super(codice, lat, lon, capacitaMax);
+    }
+}
+
+// Sottoclassi per carta, plastica/metallo e indifferenziato (volume in litri)
+class CassonettoCarta extends Cassonetto {
+    public CassonettoCarta(String codice, double lat, double lon, double capacitaMax) {
+        super(codice, lat, lon, capacitaMax);
+    }
+}
+
+class CassonettoPlasticaMetallo extends Cassonetto {
+    public CassonettoPlasticaMetallo(String codice, double lat, double lon, double capacitaMax) {
+        super(codice, lat, lon, capacitaMax);
+    }
+}
+
+class CassonettoIndifferenziato extends Cassonetto {
+    public CassonettoIndifferenziato(String codice, double lat, double lon, double capacitaMax) {
+        super(codice, lat, lon, capacitaMax);
+    }
+}
+
+// Classe per il test
+public class SmartWasteTest {
+    public static void main(String[] args) {
+        CassonettoOrganico organico = new CassonettoOrganico("ORG-001", 45.4642, 9.1900, 50);
+        CassonettoVetro vetro = new CassonettoVetro("VET-001", 45.4643, 9.1910, 100);
+        CassonettoCarta carta = new CassonettoCarta("CAR-001", 45.4644, 9.1920, 200);
+        CassonettoPlasticaMetallo plasticaMetallo = new CassonettoPlasticaMetallo("PLA-001", 45.4645, 9.1930, 150);
+        CassonettoIndifferenziato indifferenziato = new CassonettoIndifferenziato("IND-001", 45.4646, 9.1940, 120);
+        
+        // Test inserimento rifiuti
+        organico.aggiungiRifiuto(20);
+        vetro.aggiungiRifiuto(50);
+        carta.aggiungiRifiuto(100);
+        plasticaMetallo.aggiungiRifiuto(120);
+        indifferenziato.aggiungiRifiuto(60);
+
+        // Stampa lo stato di riempimento
+        System.out.println(organico);
+        System.out.println(vetro);
+        System.out.println(carta);
+        System.out.println(plasticaMetallo);
+        System.out.println(indifferenziato);
+        
+        // Test svuotamento
+        organico.registrareSvuotamento();
+        System.out.println("Dopo svuotamento: " + organico);
+    }
+}
